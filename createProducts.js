@@ -15,12 +15,7 @@ function createProducts(name, price, quantity)
             console.log(`Product -> ${this.name}, Price -> ${this.price}, Quantity -> ${this.quantity}`);
         },
 
-        applyDiscount: function(percent) 
-        {
-            let discountSum = this.price * (percent / 100);
-            let priceWithDiscount = this.price - discountSum;
-            this.price = priceWithDiscount; 
-        }
+        applyDiscount: percent => this.price -= this.price * (percent / 100),
     }   
 }
 
@@ -31,9 +26,11 @@ function main()
 
     product1.describe();
     product1.getTotalPrice();
+    product1.describe();
 
     product2.getTotalPrice();
     product2.applyDiscount(15);
+    product2.describe();
 }
 
 main();

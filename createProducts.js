@@ -1,14 +1,9 @@
-let createProducts = 
+let objectProducts = 
 {
-    name: name,
-    price: price,
-    quantity: quantity, 
-    
     getTotalPrice: function() 
     {
         return this.price * this.quantity;
     },
- 
 
     describe: function() 
     {
@@ -21,9 +16,19 @@ let createProducts =
     }
 }
 
+function createProducts(name, price, quantity) 
+{
+    return {
+        name: name,
+        price: price,
+        quantity: quantity
+        }
+}
+
 function main()
 {
-
+    let product_1 = createProducts("Phone", 1500, 3);
+    createProducts.getTotalPrice;
 }
 
 main();

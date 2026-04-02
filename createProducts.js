@@ -17,7 +17,9 @@ function createProducts(name, price, quantity)
 
         applyDiscount: function(percent) 
         {
-            return (this.price * this.quantity) * (percent / 100)
+            let discountSum = this.price * (percent / 100);
+            let priceWithDiscount = this.price - discountSum;
+            this.price = priceWithDiscount; 
         }
     }   
 }

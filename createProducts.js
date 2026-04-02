@@ -1,28 +1,25 @@
-let objectProducts = 
-{
-    getTotalPrice: function() 
-    {
-        return this.price * this.quantity;
-    },
-
-    describe: function() 
-    {
-        console.log(`Product -> ${this.name}, Price -> ${this.price}, Quantity -> ${this.quantity}`);
-    },
-
-    applyDiscount: function() 
-    {
-
-    }
-}
-
-function createProducts(name, price, quantity) 
+function createProducts(name, price, quantity)
 {
     return {
         name: name,
         price: price,
-        quantity: quantity
+        quantity: quantity,
+    
+        getTotalPrice: function() 
+        {
+            return this.price * this.quantity;
+        },
+
+        describe: function() 
+        {
+            console.log(`Product -> ${this.name}, Price -> ${this.price}, Quantity -> ${this.quantity}`);
+        },
+
+        applyDiscount: function() 
+        {
+
         }
+    }   
 }
 
 function main()

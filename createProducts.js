@@ -15,7 +15,7 @@ function createProducts(name, price, quantity)
             console.log(`Product -> ${this.name}, Price -> ${this.price}, Quantity -> ${this.quantity}`);
         },
 
-        applyDiscount: percent => this.price -= this.price * (percent / 100),
+        applyDiscount: function(percent) { this.price -= this.price * (percent / 100) }
     }   
 }
 
